@@ -12,7 +12,7 @@
   <body>
     <nav class="navbar navbar-expand-lg bg-info mb-5">
       <div class="container-fluid ms-4 me-4">
-        <a class="navbar-brand" href="/"> <img src="../assets/img/1546058-middle-removebg-preview2.png" style="width: 20px; object-fit: cover" alt="" /></a>
+        <a class="navbar-brand" href="/"> <img src="assets/img/1546058-middle-removebg-preview2.png" style="width: 20px; object-fit: cover" alt="" /></a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -22,7 +22,7 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/blog">My Project</a>
+              <a class="nav-link" href="/add-blog">Add Project</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/testimonial">Testimonial</a>
@@ -36,8 +36,7 @@
       <div class="blog-detail row justify-content-center">
         <div class="blog-detail-container col-md-10">
           <h1 class="display-4 fw-bold">{{data.title}}</h1>
-          <div class="author text-muted mb-4">{{data.id}}
-            | 03 Juni 2024 08:50 WIB</div>
+          <div class="author text-muted mb-4">Durasi | {{data.durasi}}</div>
           <img src="../assets/img/blog-img.png" alt="blog-detail" class="img-fluid mb-4" />
           <p class="lead">
             {{data.content}}

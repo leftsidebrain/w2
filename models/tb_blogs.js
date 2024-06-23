@@ -15,7 +15,15 @@ module.exports = (sequelize, DataTypes) => {
   }
   tb_blogs.init({
     title: DataTypes.STRING,
-    content: DataTypes.STRING
+    start_date: DataTypes.DATE,
+    end_date: DataTypes.DATE,
+    content: DataTypes.TEXT,
+    nodejs: DataTypes.BOOLEAN,
+    reactjs: DataTypes.BOOLEAN,
+    nextjs: DataTypes.BOOLEAN,
+    typescript: DataTypes.BOOLEAN,
+    image: DataTypes.STRING,
+    durasi: DataTypes.STRING
   }, {
     sequelize,
     modelName: 'tb_blogs',

@@ -22,7 +22,7 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link active" href="/blog">My Project</a>
+              <a class="nav-link active" href="/blog">Add Project</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/testimonial">Testimonial</a>
@@ -33,7 +33,7 @@
       </div>
     </nav>
 
-    {{!-- <div class="container-lg d-flex flex-column">
+    <div class="container-lg d-flex flex-column">
       <div class="w-100 d-flex justify-content-end mb-3">
         <a href="/add-blog" class="btn btn-success">Add New Blog</a>
       </div>
@@ -48,31 +48,37 @@
               <div class="col-md-8">
                 <div class="row">
                   <div class="col-md text-end me-5">
-                    <a href="/edit-blog/{{@index}}">
+                    <a href="/edit-blog/{{id}}">
                       <button class="btn btn-success">Edit Post</button></a>
-                    <a href="/delete/{{@index}}">
+                    <a href="/delete/{{id}}">
                       <button class="btn btn-danger">Delete Post</button></a>
                   </div>
                 </div>
                 <div class="card-body">
                   <h3 class="card-title">
                     <a
-                      href="/blog-detail/{{@index}}"
+                      href="/blog-detail/{{id}}"
                       style="text-decoration: none;
                     color: black;"
                       target="_blank"
                     >{{title}}</a>
                   </h3>
-                  <p class="card-text"> {{@index}} | Date Now</p>
+                  <p class="card-text"> Durasi | {{durasi}}</p>
                   <p class="card-text">{{content}}</p>
-                  <p></p>
+                  <div class="mb-3 justify-content-start d-flex" style="font-size: 20px; height: 25px;">
+                    {{#if nodejs}}
+                      <i class="fa-brands fa-node-js me-3"></i>{{/if}}
+                    {{#if reactjs}} <i class="fa-brands fa-react me-3"></i>{{/if}}
+                    {{#if nextjs}}<i class="fa-brands fa-jsfiddle me-3"></i>{{/if}}
+                    {{#if typescript}}<i class="fa-solid fa-scroll me-3"></i>{{/if}}
+                  </div>
                 </div>
               </div>
             </div>
           </div>
         {{/each}}
       </div>
-    </div> --}}
+    </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   </body>

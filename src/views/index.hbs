@@ -23,7 +23,7 @@
               <a class="nav-link active" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/add-blog">Add Project</a>
+              <a class="nav-link" href="/blog">Add Project</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/testimonial">Testimonial</a>
@@ -54,19 +54,20 @@
 
     <div class="container-fluid mt-5" style="background-color: rgb(238, 238, 238);">
       <h1 class="text-center p-5">MY PROJECT</h1>
-      <div class="container-lg p-3 d-flex flex-wrap justify-content-evenly flex-row-reverse">
+      <div class="container-lg p-3 d-flex flex-wrap justify-content-evenly">
         {{#each obj}}
           <div class="card p-3 w-30 mb-5" style="width: 23rem;">
             <img src="../assets/img/ddszdnf-d376361c-a053-462a-b495-16a58c56716a.png" class="card-img-top" />
             <div class="card-body">
-              <h5 class="card-title"><a href="/blog-detail/{{id}}">{{title}}</a></h5>
-              <p class="card-text">{{id}} | <span id="time">{{createdAt}}</span></p>
+              <h5 class="card-title"><a style="text-decoration: none; font-size: 25px; font-weight: bold; color: orangered;" href="/blog-detail/{{id}}">{{title}}</a></h5>
+              <p class="card-text">Durasi | {{durasi}}</p>
               <p class="card-text">{{content}}</p>
-              <div class="mb-3 justify-content-start d-flex" style="font-size: 20px;">
-                <i class="fa-brands fa-node-js me-3"></i>
-                <i class="fa-brands fa-react me-3"></i>
-                <i class="fa-brands fa-jsfiddle me-3"></i>
-                <i class="fa-solid fa-scroll me-3"></i>
+              <div class="mb-3 justify-content-start d-flex" style="font-size: 20px; height: 25px;">
+                {{#if nodejs}}
+                  <i class="fa-brands fa-node-js me-3"></i>{{/if}}
+                {{#if reactjs}} <i class="fa-brands fa-react me-3"></i>{{/if}}
+                {{#if nextjs}}<i class="fa-brands fa-jsfiddle me-3"></i>{{/if}}
+                {{#if typescript}}<i class="fa-solid fa-scroll me-3"></i>{{/if}}
               </div>
               <div class="row justify-content-around">
                 <a href="/edit-blog/{{id}}" class="btn btn-primary col-5">Edit Post</a>
